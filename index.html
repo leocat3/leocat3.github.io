@@ -1,1 +1,535 @@
-Test
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>Open-PLC</title>
+<style>
+html, body
+{
+   width: 100%;
+   height: 100%;
+}
+body
+{
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #E6E6E6;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#indexLayer1
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#indexImage1
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_indexCssMenu1
+{
+   border: 0px #B3B3B3 solid;
+   background-color: #B3B3B3;
+}
+#wb_indexCssMenu1 ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_indexCssMenu1 li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 0px 0px 0px;
+   width: 100%;
+}
+#wb_indexCssMenu1 a
+{
+   display: block;
+   float: left;
+   color: #333333;
+   border: 1px #000000 solid;
+   background-color: #B3B3B3;
+   background-color: rgba(179,179,179,0.70);
+   background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+   text-decoration: none;
+   width: 97.83%;
+   height: 26px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 26px;
+   text-align: center;
+}
+#wb_indexCssMenu1 li:hover a, #wb_indexCssMenu1 a:hover, #wb_indexCssMenu1 .active
+{
+   color: #FFFFFF;
+   background-color: #337AB7;
+   background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   border: 1px #2E6DA4 solid;
+}
+#wb_indexCssMenu1 li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_indexCssMenu1 li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_indexCssMenu1 br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#indexLayer3
+{
+   background-color: #B3B3B3;
+   background-image: none;
+}
+#indexLayer4
+{
+   background-color: #F0F8FF;
+   background-image: none;
+   border: 1px transparent solid;
+}
+#wb_indexText1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_indexText1 div
+{
+   text-align: center;
+}
+#indexLayer2
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px #CCCCCC solid;
+}
+#NavigationBar1 ul.navbar
+{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar1 ul.navbar li
+{
+   height: 30px;
+   width: 120px;
+   margin: 0 0 4px 0;
+   vertical-align: bottom;
+}
+#NavigationBar1 ul.navbar li a
+{
+   display: block;
+   position: relative;
+}
+#NavigationBar1 ul.navbar li a img
+{
+   position: absolute;
+   left: 0;
+   z-index: 1;
+   border-width: 0;
+}
+#NavigationBar1 ul.navbar li span
+{
+   display: block;
+   height: 30px;
+   width: 120px;
+   position: absolute;
+   z-index: 2;
+}
+#NavigationBar1 ul li a.active span
+{
+   visibility: hidden !important;
+}
+#NavigationBar1 ul li a.active .hover
+{
+   visibility: visible !important;
+}
+#NavigationBar1 a .hover
+{
+   visibility: hidden;
+}
+#NavigationBar1 a:hover .hover
+{
+   visibility: visible;
+}
+#NavigationBar1 a:hover span
+{
+   visibility: hidden;
+}
+#NavigationBar1 ul li a.active img
+{
+}
+#NavigationBar1
+{
+   margin: 10px 0px 0px 0px;
+}
+#NavigationBar1.affix
+{
+   top: 0 !important;
+   position: fixed !important;
+   left: 50% !important;
+   margin-left: -502px;
+}
+#indexLayer5
+{
+   background-color: #F0F8FF;
+   background-image: none;
+}
+#wb_indexBulletedList1
+{
+   border: 0px #C0C0C0 solid;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexBulletedList1 .bullet
+{
+   color: #000000;
+   float: left;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   padding: 0px;
+   text-align: left;
+   vertical-align: top;
+   width: 49px;
+}
+#wb_indexBulletedList1 .item
+{
+   float: left;
+   padding: 0px 0 0px 0;
+   vertical-align: top;
+   width: 502px;
+}
+#index_ruLayer1
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#indexLayer6
+{
+   background-color: #696969;
+   background-image: none;
+   border: 1px #CCCCCC solid;
+}
+#wb_index_ruText1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_index_ruText1 div
+{
+   text-align: left;
+}
+#wb_index_ruText2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_index_ruText2 div
+{
+   text-align: left;
+}
+#wb_index_ruText3 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_index_ruText3 div
+{
+   text-align: left;
+}
+#wb_index_ruText4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_index_ruText4 div
+{
+   text-align: left;
+}
+#index_ruTable1
+{
+   border: 1px #000000 solid;
+   background-color: transparent;
+   background-image: none;
+   border-collapse: separate;
+   border-spacing: 1px;
+}
+#index_ruTable1 td
+{
+   padding: 0px 0px 0px 0px;
+}
+#index_ruTable1 td div
+{
+   white-space: nowrap;
+}
+#index_ruTable1 .cell0
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: justify;
+   vertical-align: top;
+   width: 385px;
+   height: 54px;
+}
+#index_ruTable1 .cell1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: top;
+   height: 54px;
+}
+#index_ruTable1 .cell2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: justify;
+   vertical-align: top;
+   width: 385px;
+   height: 46px;
+}
+#index_ruTable1 .cell3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: top;
+   height: 46px;
+}
+#index_ruTable1 .cell4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: justify;
+   vertical-align: top;
+   width: 385px;
+   height: 24px;
+}
+#index_ruTable1 .cell5
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: top;
+   height: 24px;
+}
+#index_ruTable1 .cell6
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: left;
+   vertical-align: top;
+   width: 385px;
+   height: 24px;
+}
+#index_ruTable1 .cell7
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: justify;
+   vertical-align: top;
+   width: 385px;
+   height: 86px;
+}
+#index_ruTable1 .cell8
+{
+   background-color: transparent;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: top;
+   height: 86px;
+}
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script src="affix.min.js"></script>
+<script src="scrollspy.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#NavigationBar1").affix({offset:{top: $("#NavigationBar1").offset().top}});
+});
+</script>
+<style>
+#NavigationBar1, #NavigationBar1.affix
+{
+   left: 10px !important;
+   margin-left: 0;
+   z-index: 999 !important;
+}
+</style>
+</head>
+<body data-spy="scroll">
+<div id="NavigationBar1" style="position:absolute;left:10px;top:158px;width:120px;height:102px;z-index:15;">
+<ul class="navbar">
+<li><a href="#Home"><img alt="" src="images/img0017_over.png" class="hover"><span><img alt="" src="images/img0017.png"></span></a></li>
+<li><a href="#Page1"><img alt="" src="images/img0018_over.png" class="hover"><span><img alt="" src="images/img0018.png"></span></a></li>
+<li><a href="#Contacts"><img alt="" src="images/img0019_over.png" class="hover"><span><img alt="" src="images/img0019.png"></span></a></li>
+</ul>
+</div>
+<div id="indexLayer1" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:16;">
+<div id="wb_indexImage1" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="indexImage1" alt=""></div>
+
+<div id="wb_Home" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:2;">
+<a id="Home" style="visibility:hidden">&nbsp;</a>
+</div>
+</div>
+<div id="indexLayer3" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:17;">
+<div id="wb_indexCssMenu1" style="position:absolute;left:69px;top:12px;width:740px;height:28px;text-align:center;z-index:3;">
+<ul>
+<li class="firstmain"><a class="active" href="./index.html" target="_self" title="Home">PLC&nbsp;&#1052;&#1086;&#1076;&#1077;&#1084;</a>
+</li>
+</ul>
+</div>
+<div id="indexLayer5" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:4;">
+</div>
+<div id="index_ruLayer1" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:5;">
+</div>
+</div>
+<div id="indexLayer4" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:18;">
+<div id="wb_indexText1" style="position:absolute;left:339px;top:25px;width:252px;height:24px;text-align:center;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:21px;"><strong><em>Что такое PLC:</em></strong></span></div>
+<div id="wb_indexBulletedList1" style="position:absolute;left:179px;top:65px;width:552px;height:52px;z-index:7;">
+<div>
+   <div class="bullet" style="height:26px;">&bull;</div>
+   <div class="item" style="height:26px;text-align:left;"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;"><strong><em>Programmable Logic Controller ( PLC )</em></strong></span></div>
+</div>
+<div style="clear:both">
+   <div class="bullet" style="height:26px;">&bull;</div>
+   <div class="item" style="height:26px;text-align:left;"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;"><strong><em>Power Line Communitation ( PLC )</em></strong></span></div>
+</div>
+</div>
+<div id="wb_index_ruText3" style="position:absolute;left:179px;top:164px;width:738px;height:38px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">	Начнем с PLC модема, как вызывающего больший интерес. Контроллеров якобы уже хватает, хотя предлагаемая платформа контроллеров тоже - оригинальна.<br></span></div>
+<div id="wb_index_ruText4" style="position:absolute;left:417px;top:218px;width:245px;height:22px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Характеристики модема</span></div>
+<table style="position:absolute;left:179px;top:248px;width:715px;height:360px;z-index:10;" id="index_ruTable1">
+<tr>
+<td class="cell0"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Рабочий диапазон питающего напряжения</span></div></td>
+<td class="cell1"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;">DC 0-48V; AC 0-250V</span></td>
+</tr>
+<tr>
+<td class="cell2"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:21px;">Максимальная потребляемая мощность не превышает</span></div></td>
+<td class="cell3"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;"> 1Вт</span></td>
+</tr>
+<tr>
+<td class="cell4"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Режим работы модема</span></div></td>
+<td class="cell5"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">непрерывный; прозрачный</span></td>
+</tr>
+<tr>
+<td class="cell4"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Разъемы</span></div></td>
+<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;">Arduino UNO совместимый</span></td>
+</tr>
+<tr>
+<td class="cell6"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;">Используемые интерфейсы</span></td>
+<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;">один из SPI; I2C; UART</span></td>
+</tr>
+<tr>
+<td class="cell7"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Логическая организация сетей</span></div></td>
+<td class="cell8"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:21px;">простые одноранговые сети без возможности разделения на подсети, каждый модем имеет уникальный адрес</span></td>
+</tr>
+<tr>
+<td class="cell4"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Скорость передачи данных по PLC сети</span></div></td>
+<td class="cell5"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;"> 1200 - 19200 бит/с</span></td>
+</tr>
+<tr>
+<td class="cell4"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Диапазон частот при передаче данных по PLC</span></div></td>
+<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:19px;line-height:21px;">1.87 MHz</span></td>
+</tr>
+<tr>
+<td class="cell4"><div align="justify"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">Уровень сигнала</span></div></td>
+<td class="cell5"><span style="color:#231F20;font-family:'Times New Roman';font-size:19px;line-height:20px;">менее 116 дбмкВ</span></td>
+</tr>
+</table>
+</div>
+<div id="indexLayer2" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:19;">
+<div id="wb_Page1" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:11;">
+<a id="Page1" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_index_ruText1" style="position:absolute;left:179px;top:95px;width:738px;height:108px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><strong><em><a href="http://open-plc.blogspot.ru/2017/02/plc-modem.html">Блог</a></em></strong> - ссылка на описание работы модема с возможностью обсудить.<br><br>	Первая реализация &quot;в железе&quot; будет как шилд и библиотека для Arduino. На текущий момент находится в разработке и тестировании.<br>	В этом же проекте реализуется модем как проходная вилка-розетка с анализом потребляемой мощности и диммированием нагрузки.</span></div>
+</div>
+<div id="indexLayer6" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:141px;float:left;clear:left;display:block;z-index:20;">
+<div id="wb_Contacts" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:13;">
+<a id="Contacts" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_index_ruText2" style="position:absolute;left:179px;top:25px;width:389px;height:80px;z-index:14;text-align:left;">
+<span style="color:#F5FFFA;font-family:Arial;font-size:13px;"><strong>Alexander Suvorov<br><br>Contacts:<br>info@open-plc.com<br>Блог: <a href="http://open-plc.blogspot.ru/2016/12/open-source-plc-programmable-logic.html" target="_blank">Open-PLC</a></strong></span></div>
+</div>
+</body>
+</html>
