@@ -1,2 +1,2 @@
-# DCS
+# OpenPLC
 Distributed Control System
