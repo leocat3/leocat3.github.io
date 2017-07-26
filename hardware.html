@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="iso-8859-1">
-<title>;)</title>
+<meta charset="utf-8">
+<title>Open-PLC</title>
 <link href="l_icon.ico" rel="shortcut icon" type="image/x-icon">
 <style>
 html, body
@@ -12,7 +12,7 @@ html, body
 }
 body
 {
-   background-color: #FFFFFF;
+   background-color: #F0F8FF;
    color: #000000;
    font-family: Arial;
    font-weight: normal;
@@ -39,7 +39,7 @@ a:hover
    color: #0000FF;
    text-decoration: underline;
 }
-#wb_indexText2 
+#indexText2 
 {
    background-color: transparent;
    background-image: none;
@@ -48,7 +48,7 @@ a:hover
    margin: 0;
    text-align: center;
 }
-#wb_indexText2 div
+#indexText2 div
 {
    text-align: center;
 }
@@ -56,78 +56,6 @@ a:hover
 {
    background-color: #CCCCCC;
    background-image: none;
-}
-#wb_MainMenu
-{
-   border: 0px #B3B3B3 solid;
-   background-color: #B3B3B3;
-}
-#wb_MainMenu ul
-{
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-}
-#wb_MainMenu li
-{
-   float: left;
-   margin: 0;
-   padding: 0px 4px 0px 0px;
-   width: 100px;
-}
-#wb_MainMenu a
-{
-   display: block;
-   float: left;
-   color: #333333;
-   border: 1px #000000 solid;
-   -moz-border-radius: 5px;
-   -webkit-border-radius: 5px;
-   border-radius: 5px;
-   background-color: #B3B3B3;
-   background-color: rgba(179,179,179,0.70);
-   background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-   background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-   background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-   background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-   background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
-   font-family: Arial;
-   font-weight: bold;
-   font-size: 16px;
-   font-style: italic;
-   text-decoration: none;
-   width: 88px;
-   height: 26px;
-   padding: 0px 5px 0px 5px;
-   vertical-align: middle;
-   line-height: 26px;
-   text-align: center;
-}
-#wb_MainMenu li:hover a, #wb_MainMenu a:hover, #wb_MainMenu .active
-{
-   color: #FFFFFF;
-   background-color: #337AB7;
-   background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-   background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-   background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-   background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-   background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
-   border: 1px #2E6DA4 solid;
-}
-#wb_MainMenu li.firstmain
-{
-   padding-left: 0px;
-}
-#wb_MainMenu li.lastmain
-{
-   padding-right: 0px;
-}
-#wb_MainMenu br
-{
-   clear: both;
-   font-size: 1px;
-   height: 0;
-   line-height: 0;
 }
 #Layer03
 {
@@ -146,63 +74,6 @@ a:hover
    background-image: none;
    border: 1px #CCCCCC solid;
 }
-#Layer05
-{
-   background-color: #F0F8FF;
-   background-image: none;
-}
-#Layer06
-{
-   background-color: #CCCCCC;
-   background-image: none;
-}
-#Layer07
-{
-   background-color: #F0F8FF;
-   background-image: none;
-   border: 1px #CCCCCC solid;
-}
-#wb_Text03 
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: left;
-}
-#wb_Text03 div
-{
-   text-align: left;
-}
-#wb_Text01 
-{
-   background-color: transparent;
-   background-image: none;
-   border: 0px #000000 solid;
-   padding: 0;
-   margin: 0;
-   text-align: center;
-}
-#wb_Text01 div
-{
-   text-align: center;
-}
-#Logo_Image
-{
-   border: 0px #000000 solid;
-   padding: 0px 0px 0px 0px;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-}
-#hardwareLayer1
-{
-   background-color: #F0F8FF;
-   background-image: none;
-   border: 1px #CCCCCC solid;
-}
 #NavigationBar1 ul.navbar
 {
    list-style: none;
@@ -212,9 +83,9 @@ a:hover
 #NavigationBar1 ul.navbar li
 {
    height: 30px;
-   width: 120px;
-   margin: 0 0 4px 0;
-   vertical-align: bottom;
+   width: 100px;
+   float: left;
+   margin: 0 4px 0 0;
 }
 #NavigationBar1 ul.navbar li a
 {
@@ -232,7 +103,7 @@ a:hover
 {
    display: block;
    height: 30px;
-   width: 120px;
+   width: 100px;
    position: absolute;
    z-index: 2;
 }
@@ -268,7 +139,58 @@ a:hover
    top: 0 !important;
    position: fixed !important;
    left: 50% !important;
-   margin-left: -502px;
+   margin-left: -441px;
+}
+#Layer05
+{
+   background-color: #F0F8FF;
+   background-image: none;
+}
+#Layer06
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer07
+{
+   background-color: #F0F8FF;
+   background-image: none;
+   border: 1px #CCCCCC solid;
+}
+#Text03 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#Text03 div
+{
+   text-align: left;
+}
+#Text01 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#Text01 div
+{
+   text-align: center;
+}
+#Logo_Image
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
 }
 </style>
 <script src="jquery-1.12.4.min.js"></script>
@@ -283,7 +205,7 @@ $(document).ready(function()
 <style>
 #NavigationBar1, #NavigationBar1.affix
 {
-   left: 10px !important;
+   left: 71px !important;
    margin-left: 0;
    z-index: 999 !important;
 }
@@ -291,53 +213,41 @@ $(document).ready(function()
 </head>
 <body data-spy="scroll">
 
-<div id="NavigationBar1" style="position:absolute;left:10px;top:158px;width:120px;height:102px;z-index:11;">
+<div id="NavigationBar1" style="position:absolute;left:71px;top:104px;width:416px;height:30px;z-index:9;">
 <ul class="navbar">
-<li><a href="#Page1"><img alt="" src="images/img0001_over.png" class="hover"><span><img alt="" src="images/img0001.png"></span></a></li>
-<li><a href="#Page2"><img alt="" src="images/img0002_over.png" class="hover"><span><img alt="" src="images/img0002.png"></span></a></li>
-<li><a href="#Page3"><img alt="" src="images/img0003_over.png" class="hover"><span><img alt="" src="images/img0003.png"></span></a></li>
+<li><a href="./index.html"><img alt="" src="images/img0001_over.png" class="hover"><span><img alt="" src="images/img0001.png"></span></a></li>
+<li><a href="#Page1"><img alt="" src="images/img0002_over.png" class="hover"><span><img alt="" src="images/img0002.png"></span></a></li>
+<li><a href="#Page2"><img alt="" src="images/img0003_over.png" class="hover"><span><img alt="" src="images/img0003.png"></span></a></li>
+<li><a href="#Page3"><img alt="" src="images/img0008_over.png" class="hover"><span><img alt="" src="images/img0008.png"></span></a></li>
 </ul>
 </div>
-<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:12;">
-<div id="wb_Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:10;">
+<div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
 <img src="images/logo.png" id="Logo_Image" alt=""></div>
-<div id="wb_Page1" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:1;">
+<div id="Page1" style="position:absolute;left:0px;top:0px;width:20px;height:20px;z-index:1;">
 <a id="Page1" style="visibility:hidden">&nbsp;</a>
 </div>
 </div>
-<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:13;">
-<div id="wb_MainMenu" style="position:absolute;left:71px;top:12px;width:800px;height:28px;z-index:2;">
-<ul>
-<li class="firstmain"><a href="./index.html#Home" target="_self" title="Home">Home</a>
-</li>
-<li><a href="./page1.html" target="_self">page1</a>
-</li>
-</ul>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:11;">
+<div id="Layer05" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:2;">
 </div>
-<div id="Layer05" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:3;">
-</div>
-<div id="Layer06" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:4;">
+<div id="Layer06" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:3;">
 </div>
 </div>
-<div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:14;">
-<div id="wb_Text01" style="position:absolute;left:344px;top:18px;width:252px;height:37px;text-align:center;z-index:5;">
+<div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:12;">
+<div id="Text01" style="position:absolute;left:116px;top:14px;width:252px;height:37px;text-align:center;z-index:4;">
 <span style="color:#000000;font-family:Arial;font-size:32px;"><strong><u>Home</u></strong></span></div>
-<div id="wb_Text03" style="position:absolute;left:290px;top:65px;width:383px;height:24px;z-index:6;text-align:left;">
+<div id="Text03" style="position:absolute;left:51px;top:65px;width:383px;height:24px;z-index:5;text-align:left;">
 <span style="color:#000000;font-family:Arial;font-size:21px;"><strong><em>Welcome to the World of Open-PLC!</em></strong></span></div>
 </div>
-<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:15;">
-<div id="wb_Page2" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:7;">
+<div id="Layer02" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:13;">
+<div id="Page2" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:6;">
 <a id="Page2" style="visibility:hidden">&nbsp;</a>
 </div>
 </div>
-<div id="Layer07" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:16;">
-<div id="wb_Page3" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:8;">
+<div id="Layer07" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:14;">
+<div id="Page3" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:7;">
 <a id="Page3" style="visibility:hidden">&nbsp;</a>
-</div>
-</div>
-<div id="hardwareLayer1" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:17;">
-<div id="wb_Page4" style="position:absolute;left:9px;top:12px;width:19px;height:18px;z-index:9;">
-<a id="Page4" style="visibility:hidden">&nbsp;</a>
 </div>
 </div>
 </body>

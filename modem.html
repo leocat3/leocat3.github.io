@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-PLC</title>
+<link href="l_icon.ico" rel="shortcut icon" type="image/x-icon">
+<style>
+html, body
+{
+   width: 100%;
+   height: 100%;
+}
+body
+{
+   background-color: #F0F8FF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #E6E6E6;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#indexText2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#indexText2 div
+{
+   text-align: center;
+}
+#Layer01
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Layer03
+{
+   background-color: #B3B3B3;
+   background-image: none;
+}
+#Layer04
+{
+   background-color: #F0F8FF;
+   background-image: none;
+   border: 1px transparent solid;
+}
+#Layer05
+{
+   background-color: #F0F8FF;
+   background-image: none;
+}
+#Layer06
+{
+   background-color: #CCCCCC;
+   background-image: none;
+}
+#Logo_Image
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText1 div
+{
+   text-align: left;
+}
+#MainMenu
+{
+   border: 0px #B3B3B3 solid;
+   background-color: #B3B3B3;
+}
+#MainMenu ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#MainMenu li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 0px 0px 0px;
+   width: 25%;
+}
+#MainMenu a
+{
+   display: block;
+   float: left;
+   color: #333333;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #B3B3B3;
+   background-color: rgba(179,179,179,0.70);
+   background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+   text-decoration: none;
+   width: 91.84%;
+   height: 26px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 26px;
+   text-align: center;
+}
+#MainMenu li:hover a, #MainMenu a:hover, #MainMenu .active
+{
+   color: #FFFFFF;
+   background-color: #337AB7;
+   background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+   border: 1px #2E6DA4 solid;
+}
+#MainMenu li.firstmain
+{
+   padding-left: 0px;
+}
+#MainMenu li.lastmain
+{
+   padding-right: 0px;
+}
+#MainMenu br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#modemText2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText2 div
+{
+   text-align: left;
+}
+#modemText3 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText3 div
+{
+   text-align: center;
+}
+#modemText4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText4 div
+{
+   text-align: left;
+}
+#modemText5 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText5 div
+{
+   text-align: center;
+}
+#modemImage1
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText6 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText6 div
+{
+   text-align: center;
+}
+#modemImage2
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText7 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText7 div
+{
+   text-align: left;
+}
+#modemText8 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText8 div
+{
+   text-align: left;
+}
+#modemText9 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText9 div
+{
+   text-align: left;
+}
+#modemText10 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText10 div
+{
+   text-align: left;
+}
+#modemText11 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText11 div
+{
+   text-align: left;
+}
+#modemImage3
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText12 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText12 div
+{
+   text-align: left;
+}
+#modemText13 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText13 div
+{
+   text-align: center;
+}
+#modemText14 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText14 div
+{
+   text-align: left;
+}
+#modemText15 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText15 div
+{
+   text-align: center;
+}
+#modemText16 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText16 div
+{
+   text-align: center;
+}
+#modemText17 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText17 div
+{
+   text-align: left;
+}
+#modemImage4
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemImage5
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText18 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText18 div
+{
+   text-align: left;
+}
+#modemText19 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#modemText19 div
+{
+   text-align: center;
+}
+#modemText20 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText20 div
+{
+   text-align: left;
+}
+#modemText21 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText21 div
+{
+   text-align: left;
+}
+#modemImage6
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#modemText22 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText22 div
+{
+   text-align: left;
+}
+#modemText23 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText23 div
+{
+   text-align: left;
+}
+#modemText24 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText24 div
+{
+   text-align: left;
+}
+#modemText25 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText25 div
+{
+   text-align: left;
+}
+#modemText26 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#modemText26 div
+{
+   text-align: left;
+}
+</style>
+</head>
+<body>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:36;">
+<div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+</div>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:37;">
+<div id="Layer05" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:1;">
+</div>
+<div id="Layer06" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:2;">
+</div>
+<div id="MainMenu" style="position:absolute;left:71px;top:12px;width:800px;height:28px;z-index:3;">
+<ul>
+<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+</li>
+<li><a href="https://open-plc.blogspot.ru" target="_blank">Blog</a>
+</li>
+<li><a class="active" href="./modem.html" target="_self">PLC&nbsp;Modem</a>
+</li>
+<li><a href="#" target="_self">Linux&nbsp;PLC</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:38;">
+<div id="modemText1" style="position:absolute;left:51px;top:57px;width:819px;height:90px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; What is interesting about PowerLine? It's no additional wiring is required. Most of the devices in the modern world are powered by external sources by wires. Radio modules in their mass are no exception. Power can be either a constant current of 12-24V or alternating current of 110V - 220V. To transmit information it does not matter if there is voltage in the line or not, you need only two wires.<br>&nbsp;&nbsp;&nbsp; The prototypes of the modem were made, tests were carried out, the electric circuit shcemes was develop.</span></div>
+<div id="modemText2" style="position:absolute;left:51px;top:650px;width:819px;height:36px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; A modem is a device that modulates the UART signal with a radio frequency. The signal modulation method is CW, the frequency is 1.87 MHz (160 m). The UART speed is 1200-19200 bps.</span></div>
+<div id="modemText3" style="position:absolute;left:360px;top:26px;width:200px;height:23px;text-align:center;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:19px;"><strong><em>Introduction</em></strong></span></div>
+<div id="modemText4" style="position:absolute;left:51px;top:1205px;width:819px;height:72px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The circuit is designed with minimum amount of parts surrounding the microcontroller and maximum &quot;pleasure&quot;, i.e., the load on the microcontroller is minimized. The hardware capabilities of the microcontroller are used as much as possible.<br>&nbsp;&nbsp;&nbsp; The microcontroller can perform tasks with sensors, load control (relays, triacs), etc.</span></div>
+<div id="modemImage1" style="position:absolute;left:71px;top:158px;width:778px;height:444px;z-index:8;">
+<img src="images/plc_01_fig001.png" id="modemImage1" alt=""></div>
+<div id="modemText5" style="position:absolute;left:326px;top:583px;width:234px;height:36px;text-align:center;z-index:9;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 1<br>Block diagram of the modem</span></div>
+<div id="modemText6" style="position:absolute;left:373px;top:1149px;width:195px;height:36px;text-align:center;z-index:10;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 2<br>Electric scheme (clicable)</span></div>
+<div id="modemImage2" style="position:absolute;left:138px;top:698px;width:644px;height:440px;z-index:11;">
+<a href="./images/plc_01_scheme.png" target="_blank"><img src="images/plc_01_scheme.png" id="modemImage2" alt=""></a></div>
+<div id="modemText8" style="position:absolute;left:51px;top:1726px;width:819px;height:144px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; As a meander of 1.87 MHz, PWM (PA3) is used. The percent of infill is 0 and 50%. The signal PB10 (Tx) is the control. The control signal is routed to PA4, which generates an interrupt when the state changes. The state of PA4 has changed to a low - set up 50% PWM filling. The state has changed to a high - set up 0% infill. The signal PWM is amplified by a transistor VT2, which is loaded with an oscillating circuit L2-C14. The circuit is designed for a resonance frequency of 1.87 MHz. The output of the transformer coil L3 will be a &quot;pure sine&quot;.<br>&nbsp;&nbsp;&nbsp; To block the reception signal during transmission (turning off the &quot;echo&quot;), it is enough to set 3.3V on the output of DAC (PA5), at that the receiving signal level will never exceed 2V and the comparator will never turn on. The signal will not be accepted.</span></div>
+<div id="modemText7" style="position:absolute;left:51px;top:1285px;width:196px;height:22px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">And so in more detail:</span></div>
+<div id="modemText10" style="position:absolute;left:314px;top:1332px;width:293px;height:22px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Description of the work of modem</span></div>
+<div id="modemText11" style="position:absolute;left:51px;top:1367px;width:819px;height:306px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Capacitors C12, C13 and transformer coil L3 perform the following functions:<br><br>galvanic isolation<br>Band-pass filter<br>&nbsp;&nbsp;&nbsp; Because Our modem is most likely to work in an environment with other modems, eg modems G3 Prime, HomePlug, ... then the task is to filter out frequencies not included in the frequency range we used when receiving the signal.<br>&nbsp;&nbsp;&nbsp; With galvanic isolation everything is clear, why the bandpass filter? If you look at the circuit, it's just a high-pass filter, but ... As a high-pass filter, the filter is designed for a cut-off frequency of 1.7 MHz (at low frequencies). Those. All that is lower, including a 50-60 Hz network is not visible in principle. The resonance frequency of the oscillatory circuit is approximately 2.5-3 MHz. The ferrite is selected for which the operating frequency is approximately 1 MHz. Thus, the &quot;physics&quot; of ferrite works as a low-pass filter. As a result, the frequencies of modem by passed is 1.8 - 1.9 MHz. All what lower and higher is cut. Our required frequency is 1.87 MHz. At the resonance frequency, the amplitude amplification (simulation) is approximately 100-120 times. But taking into account the physical limitations of ferrite, the real resonance was obtained at the frequencies 1.8 - 1.9 MHz, and is approximately 15-30 times in amplitude. Just what we need.<br>&nbsp;&nbsp;&nbsp; For receiving / transmitting, UART3 (PB10; PB11) is used.</span></div>
+<div id="modemImage3" style="position:absolute;left:146px;top:1883px;width:640px;height:464px;z-index:16;">
+<img src="images/plc_01_fig002.png" id="modemImage3" alt=""></div>
+<div id="modemText12" style="position:absolute;left:51px;top:1688px;width:177px;height:22px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Transmission mode</span></div>
+<div id="modemText13" style="position:absolute;left:330px;top:2357px;width:280px;height:36px;text-align:center;z-index:18;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 3<br>Modulated signal UART (output), coil L3</span></div>
+<div id="modemText14" style="position:absolute;left:51px;top:2421px;width:819px;height:22px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Receive Mode</span></div>
+<div id="modemText9" style="position:absolute;left:51px;top:2461px;width:819px;height:108px;z-index:20;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The L1 coil of the transformer has no &quot;tricky&quot; functions. Works as a transformer coil in order to separate the receiving and transmitting lines. Next - a two-stage amplifier. On the VT3 amplitude amplifier (k-t gain approximately 250 times). Linearity does not interest us, the task is to maximize amplification. On the VT4, the current amplifier, the detector and the UART signal inverter, plus the amplitude-limiting filter (cuts short bursts - where the noise frequency coincided with our operating frequency and was summed). Do not confuse the circuit of the inclusion of this transistor as an emitter follower, it is not, the mode of operation is completely different.</span></div>
+<div id="modemText16" style="position:absolute;left:351px;top:3059px;width:320px;height:36px;text-align:center;z-index:21;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 4<br>Input signal on the base of transistor VT3</span></div>
+<div id="modemText15" style="position:absolute;left:334px;top:3648px;width:273px;height:72px;text-align:center;z-index:22;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 5<br>Increased fragment of the input signal.<br>separate impulses are noise in the line.</span></div>
+<div id="modemText17" style="position:absolute;left:51px;top:3129px;width:819px;height:18px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The modem was tested on a noisy power line. The signal-to-noise ratio can be up to 15-20 dB.</span></div>
+<div id="modemImage4" style="position:absolute;left:146px;top:2583px;width:640px;height:464px;z-index:24;">
+<img src="images/plc_01_fig003.png" id="modemImage4" alt=""></div>
+<div id="modemImage5" style="position:absolute;left:146px;top:3172px;width:640px;height:464px;z-index:25;">
+<img src="images/plc_01_fig004.png" id="modemImage5" alt=""></div>
+<div id="modemText18" style="position:absolute;left:51px;top:3720px;width:819px;height:18px;z-index:26;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; Figure 4 shows how the bandpass filter works, the signal frequency is 1.87 MHz.</span></div>
+<div id="modemText19" style="position:absolute;left:334px;top:4385px;width:289px;height:54px;text-align:center;z-index:27;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Fig. 6<br>Calculation of the optimal voltage<br>PA5 output for comparator operation</span></div>
+<div id="modemText20" style="position:absolute;left:51px;top:3762px;width:250px;height:22px;z-index:28;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Detecting of the UART signal</span></div>
+<div id="modemText21" style="position:absolute;left:51px;top:3804px;width:819px;height:72px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The input of the microcontroller PA2-ADC, continuously scans the received and detected signal. The data is sent in the DMA mode to the ring buffer. Depending on the distance of the signal source, the upper boundary will &quot;float&quot;. The problem is to find the middle between the signal &quot;zero&quot; and the upper boundary. This will be the optimum for the comparator. The calculated voltage is set on the PA5 DAC. The figure below explains how it looks.</span></div>
+<div id="modemImage6" style="position:absolute;left:146px;top:3901px;width:640px;height:464px;z-index:30;">
+<img src="images/plc_01_fig005.png" id="modemImage6" alt=""></div>
+<div id="modemText22" style="position:absolute;left:51px;top:4457px;width:819px;height:90px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The upper oscillogram is the output of the transistor VT4, the lower one is the output of the comparator, the recovered signal is UART.<br>&nbsp;&nbsp;&nbsp; Further, the restored UART signal Rx is applied to the PB11 input of the hardware UART. By receiving a byte, an interrupt is triggered, in which we analyze the state of data reception: whether all data is received in accordance with the protocol, encoding / decoding Hamming, etc.</span></div>
+<div id="modemText23" style="position:absolute;left:51px;top:4570px;width:307px;height:22px;z-index:32;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Implementation in the HW</span></div>
+<div id="modemText26" style="position:absolute;left:51px;top:4615px;width:819px;height:18px;z-index:33;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; A specialized board is developed - the PLC modem.</span></div>
+<div id="modemText25" style="position:absolute;left:51px;top:4653px;width:307px;height:22px;z-index:34;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Protocol</span></div>
+<div id="modemText24" style="position:absolute;left:51px;top:4699px;width:819px;height:144px;z-index:35;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">&nbsp;&nbsp;&nbsp; The protocol of data exchange can be practically anything. For example MODBUS. The device number and speed are recorded in the microcontroller. I use a protocol similar to CAN, except for broadcast commands. Speed settings and device numbers are produced by any terminal (eg terraterm, Putty, ...) using a USB-UART device.<br>&nbsp;&nbsp;&nbsp; Testing of modems was carried out on a line with a maximum length of 150 m. There was not a longer line &quot;at hand&quot;. At the maximum length, you need to conduct tests and see real the signal attenuation.<br>&nbsp;&nbsp;&nbsp; Given the voltage drop in the wires for direct current, for 24V the length of the wire (segment) can reach 300-350 meters. Those. The line should be segmented by several power sources. A pair of modems can be used as a gateway between power line segments. The transmission protocol between the gateway modems can be CAN.</span></div>
+</div>
+</body>
+</html>
