@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-PLC</title>
+<link href="l_icon.ico" rel="shortcut icon" type="image/x-icon">
+<style>
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+body
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 1.1875;
+	margin: 0;
+	padding: 0;
+}
+a
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+a:visited
+{
+	color: #800080;
+}
+a:active
+{
+	color: #E6E6E6;
+}
+a:hover
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+#indexText2 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+#indexText2 div
+{
+	text-align: center;
+}
+#Layer01
+{
+	background-color: #CCCCCC;
+	background-image: none;
+}
+#Layer03
+{
+	background-color: #B3B3B3;
+	background-image: none;
+}
+#Layer04
+{
+	background-color: #F0F8FF;
+	background-image: none;
+	border: 1px transparent solid;
+}
+#Layer05
+{
+	background-color: #F0F8FF;
+	background-image: none;
+}
+#Layer06
+{
+	background-color: #CCCCCC;
+	background-image: none;
+}
+#Logo_Image
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#modemText1 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#modemText1 div
+{
+	text-align: left;
+}
+#modemText3 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+#modemText3 div
+{
+	text-align: center;
+}
+#modemImage1
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#linux_plcText1 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#linux_plcText1 div
+{
+	text-align: left;
+}
+#linux_plcTable1
+{
+	border: 2px #C0C0C0 solid;
+	background-color: transparent;
+	background-image: none;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+#linux_plcTable1 td
+{
+	padding: 0px 0px 0px 0px;
+}
+#linux_plcTable1 td div
+{
+	white-space: nowrap;
+}
+#linux_plcTable1 .cell0
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	width: 243px;
+	height: 87px;
+}
+#linux_plcTable1 .cell1
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	height: 87px;
+}
+#linux_plcTable1 .cell2
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	width: 243px;
+	height: 244px;
+}
+#linux_plcTable1 .cell3
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	height: 244px;
+}
+#linux_plcTable1 .cell4
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	width: 243px;
+	height: 103px;
+}
+#linux_plcTable1 .cell5
+{
+	background-color: transparent;
+	background-image: none;
+	border: 1px #C0C0C0 solid;
+	text-align: left;
+	vertical-align: top;
+	height: 103px;
+}
+#linux_plcImage1
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#linux_plcImage2
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#linux_plcImage3
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#linux_plcImage4
+{
+	border: 0px #000000 solid;
+	padding: 0px 0px 0px 0px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#linux_plcText2 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#linux_plcText2 div
+{
+	text-align: left;
+}
+#linux_plcText3 
+{
+	background-color: transparent;
+	background-image: none;
+	border: 0px #000000 solid;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#linux_plcText3 div
+{
+	text-align: left;
+}
+#MainMenu
+{
+	border: 0px #B3B3B3 solid;
+	background-color: #B3B3B3;
+}
+#MainMenu ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#MainMenu li
+{
+	float: left;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	width: 25%;
+}
+#MainMenu a
+{
+	display: block;
+	float: left;
+	color: #333333;
+	border: 1px #000000 solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #B3B3B3;
+	background-color: rgba(179,179,179,0.70);
+	background: -moz-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+	background: -webkit-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+	background: -o-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+	background: -ms-linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+	background: linear-gradient(bottom,rgba(179,179,179,0.70) 0%,#E0E0E0 100%);
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 16px;
+	font-style: italic;
+	text-decoration: none;
+	width: 91.84%;
+	height: 26px;
+	padding: 0px 5px 0px 5px;
+	vertical-align: middle;
+	line-height: 26px;
+	text-align: center;
+}
+#MainMenu li:hover a, #MainMenu a:hover, #MainMenu .active
+{
+	color: #FFFFFF;
+	background-color: #337AB7;
+	background: -moz-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+	background: -webkit-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+	background: -o-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+	background: -ms-linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+	background: linear-gradient(bottom,#337AB7 0%,#EEEEEE 100%);
+	border: 1px #2E6DA4 solid;
+}
+#MainMenu li.firstmain
+{
+	padding-left: 0px;
+}
+#MainMenu li.lastmain
+{
+	padding-right: 0px;
+}
+#MainMenu br
+{
+	clear: both;
+	font-size: 1px;
+	height: 0;
+	line-height: 0;
+}
+</style>
+</head>
+<body>
+<div id="Layer01" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:102px;float:left;clear:left;display:block;z-index:15;">
+<div id="Logo_Image" style="position:absolute;left:9px;top:8px;width:395px;height:77px;z-index:0;">
+<img src="images/logo.png" id="Logo_Image" alt=""></div>
+</div>
+<div id="Layer03" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;;height:52px;float:left;clear:left;display:block;z-index:16;">
+<div id="Layer05" style="position:absolute;text-align:left;left:0px;top:12px;width:52px;height:40px;z-index:1;">
+</div>
+<div id="Layer06" style="position:absolute;text-align:left;left:0px;top:0px;width:52px;height:12px;z-index:2;">
+</div>
+<div id="MainMenu" style="position:absolute;left:71px;top:12px;width:800px;height:28px;z-index:3;">
+<ul>
+<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+</li>
+<li><a href="https://open-plc.blogspot.ru" target="_blank">Blog</a>
+</li>
+<li><a href="./modem.html" target="_self">PLC&nbsp;Modem</a>
+</li>
+<li><a class="active" href="./linux_plc.html" target="_self">Linux&nbsp;PLC</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="Layer04" style="position:relative;text-align:left;margin:0px 0px 0px 0px;width:100%;height:100%;float:left;display:block;z-index:17;">
+<div id="modemText1" style="position:absolute;left:51px;top:62px;width:819px;height:18px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Linux PLC is a layer L1 module.</span></div>
+<div id="modemText3" style="position:absolute;left:360px;top:26px;width:200px;height:23px;text-align:center;z-index:5;">
+<span style="color:#000000;font-family:Arial;font-size:19px;"><strong><em><u>Linux PLC</u></em></strong></span></div>
+<div id="linux_plcText1" style="position:absolute;left:51px;top:103px;width:378px;height:23px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:19px;"><strong><em>Software Platform:&nbsp;&nbsp;&nbsp; Embedded Linux</em></strong></span></div>
+<table style="position:absolute;left:49px;top:126px;width:820px;height:448px;z-index:7;" id="linux_plcTable1">
+<tr>
+<td class="cell0"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:18px;"><br><br>&nbsp;&nbsp;&nbsp; Hardware</span></td>
+<td class="cell1"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:18px;"><br>&nbsp;&nbsp;&nbsp; Processor:&nbsp;&nbsp;&nbsp; Type 32-bit i.MX53 / i.MX65 processor; ARM Core A8Processor <br>&nbsp;&nbsp;&nbsp; Speed:&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 800 MHz / 1000 MHz<br>&nbsp;&nbsp;&nbsp; Memory:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 256 MB / 512 MB NOR flash; 256 MB / 512 MB SDRAM</span></td>
+</tr>
+<tr>
+<td class="cell2"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:18px;"><br><br><br><br><br>&nbsp;&nbsp;&nbsp; Additional Population<br>&nbsp;&nbsp;&nbsp; Options</span></td>
+<td class="cell3"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:19px;"><br>&nbsp;&nbsp;&nbsp; <strong>-</strong> RJ-45 Ethernet connector<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> 2 serial ports: RS-232, RS-485<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> ADC: 12-bit/8-channel 0-20 mA<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> 6 Relays 220V/10A with current sensors<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> 1-Wire interface ( thermal sensors, key-button, etc. )<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> MicroSD slot<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> 1 port USB<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> HDMI display with touch screen<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> 2 CAN interfaces<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> GSM 2+<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> Differences extended modules</span></td>
+</tr>
+<tr>
+<td class="cell4"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:18px;"><br><br>&nbsp;&nbsp;&nbsp; Environmental</span></td>
+<td class="cell5"><span style="color:#000000;font-family:Arial;font-size:16px;line-height:19px;"><br>&nbsp;&nbsp;&nbsp; <strong>-</strong> Operating Temperature -40 °C to +85 °C; 33% WLAN duty cycle<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> Relative Humidity 5% to 95% (non-condensing)<br>&nbsp;&nbsp;&nbsp; <strong>-</strong> Altitude 12 000 feet (3 658 meters)</span></td>
+</tr>
+</table>
+<div id="modemImage1" style="position:absolute;left:49px;top:630px;width:820px;height:713px;z-index:8;">
+<img src="images/linux_plc_diagram.png" id="modemImage1" alt=""></div>
+<div id="linux_plcImage1" style="position:absolute;left:59px;top:1401px;width:319px;height:252px;z-index:9;">
+<img src="images/linux_plc_1.png" id="linux_plcImage1" alt=""></div>
+<div id="linux_plcImage2" style="position:absolute;left:477px;top:1427px;width:320px;height:258px;z-index:10;">
+<img src="images/linux_plc_2.png" id="linux_plcImage2" alt=""></div>
+<div id="linux_plcImage3" style="position:absolute;left:59px;top:1701px;width:319px;height:213px;z-index:11;">
+<img src="images/linux_plc_3.png" id="linux_plcImage3" alt=""></div>
+<div id="linux_plcImage4" style="position:absolute;left:477px;top:1914px;width:320px;height:188px;z-index:12;">
+<img src="images/display.png" id="linux_plcImage4" alt=""></div>
+<div id="linux_plcText2" style="position:absolute;left:149px;top:2014px;width:308px;height:16px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">You can connect to PLC display with touch screen:</span></div>
+<div id="linux_plcText3" style="position:absolute;left:526px;top:2117px;width:177px;height:16px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Display 7&quot; with touch screen</span></div>
+</div>
+</body>
+</html>
